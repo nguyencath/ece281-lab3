@@ -86,7 +86,16 @@ end top_basys3;
 architecture top_basys3_arch of top_basys3 is 
   
 	-- declare components
-
+	component thunderbird_fsm is
+        port (
+            i_C : in std_logic;
+            i_Reset : in std_logic;
+            i_clk : in std_logic;
+            o_R : out std_logic;
+            o_Y : out std_logic;
+            o_G : out std_logic
+            );
+        end component thunderbird_fsm;
   
 begin
 	-- PORT MAPS ----------------------------------------
